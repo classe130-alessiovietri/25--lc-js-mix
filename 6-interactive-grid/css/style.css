@@ -1,0 +1,43 @@
+/* 
+    RESET
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+    GENERAL
+*/
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grid-container > * {
+    text-align: center;
+    width: calc(100% / 5);
+    height: 200px;
+    border: 1px solid aqua;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#grid-container > .gaetano {
+    border-color: lightcoral;
+    background-color: aquamarine;
+}
