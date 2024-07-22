@@ -15,11 +15,19 @@ for (let i = 0; i < cells; i++) {
     newCell.innerHTML = (i + 1);
 
     newCell.addEventListener('click', function () {
-        if (!newCell.classList.contains('gaetano')) {
-            console.log(newCell.innerText);
+        /*
+            Nel contesto dell'addEventListener, abbiamo a disposizione, all'interno della function che mi gestisce l'evento,
+            una variabile speciale che è this
+
+            this contiene il riferimento all'elemento che ha subito l'evento
+        */
+        console.log('this', this, typeof this);
+
+        if (!this.classList.contains('gaetano')) {
+            console.log(this.innerText);
         }
 
-        newCell.classList.toggle('gaetano');
+        this.classList.toggle('gaetano');
     });
 
     gridContainer.append(newCell);
